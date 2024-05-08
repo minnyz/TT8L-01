@@ -17,7 +17,7 @@ def play():
 
         SCREEN.fill("orange")
 
-        PLAY_TEXT = get_font(45).render("This is the PLAY screen.", True, "White")
+        PLAY_TEXT = get_font(45).render("PLAY screen.", True, "White")
         PLAY_RECT = PLAY_TEXT.get_rect(center=(640, 260))
         SCREEN.blit(PLAY_TEXT, PLAY_RECT)
 
@@ -43,7 +43,7 @@ def options():
 
         SCREEN.fill("orange")
 
-        OPTIONS_TEXT = get_font(45).render("This is the OPTIONS screen.", True, "Black")
+        OPTIONS_TEXT = get_font(45).render("OPTIONS screen.", True, "Black")
         OPTIONS_RECT = OPTIONS_TEXT.get_rect(center=(640, 260))
         SCREEN.blit(OPTIONS_TEXT, OPTIONS_RECT)
 
@@ -69,14 +69,14 @@ def main_menu():
 
         MENU_MOUSE_POS = pygame.mouse.get_pos()
 
-        MENU_TEXT = get_font(100).render("NEON VEIL", True, "#b68f40")
-        MENU_RECT = MENU_TEXT.get_rect(center=(640, 100))
+        MENU_TEXT = get_font(100).render("LEGEND OF NEON VEIL", True, "#b68f40")
+        MENU_RECT = MENU_TEXT.get_rect(center=(450, 100))
 
-        PLAY_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(220, 250), 
+        PLAY_BUTTON = Button(image=None, pos=(150, 300), 
                             text_input="PLAY", font=get_font(75), base_color="#d7fcd4", hovering_color="yellow")
-        OPTIONS_BUTTON = Button(image=pygame.image.load("assets/Options Rect.png"), pos=(220, 400), 
+        OPTIONS_BUTTON = Button(image=None, pos=(200, 400), 
                             text_input="OPTIONS", font=get_font(75), base_color="#d7fcd4", hovering_color="yellow")
-        QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(210, 550), 
+        QUIT_BUTTON = Button(image=None, pos=(150, 500), 
                             text_input="QUIT", font=get_font(75), base_color="#d7fcd4", hovering_color="yellow")
 
         SCREEN.blit(MENU_TEXT, MENU_RECT)
