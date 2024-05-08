@@ -1,3 +1,5 @@
+import pygame 
+
 class Button():
 	def __init__(self, image, pos, text_input, font, base_color, hovering_color):
 		self.image = image
@@ -11,6 +13,8 @@ class Button():
 			self.image = self.text
 		self.rect = self.image.get_rect(center=(self.x_pos, self.y_pos))
 		self.text_rect = self.text.get_rect(center=(self.x_pos, self.y_pos))
+		#self.hover_sound = pygame.mixer.Sound()
+		s#elf.click_sound = pygame.mixer.Sound()
 
 	def update(self, screen):
 		if self.image is not None:
@@ -27,3 +31,6 @@ class Button():
 			self.text = self.font.render(self.text_input, False, self.hovering_color)
 		else:
 			self.text = self.font.render(self.text_input, True, self.base_color)
+   
+   def onClick(self)
+		self.click_sound.play()
