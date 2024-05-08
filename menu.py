@@ -9,7 +9,7 @@ pygame.display.set_caption("Menu")
 BG = pygame.image.load("assets/Background.png")
 
 def get_font(size): # Returns Press-Start-2P in the desired size
-    return pygame.font.Font("assets/font.ttf", size)
+    return pygame.font.Font("assets/r2d.ttf", size)
 
 def play():
     while True:
@@ -74,7 +74,7 @@ def main_menu():
 
         PLAY_BUTTON = Button(image=pygame.image.load("assets/Play Rect.png"), pos=(220, 250), 
                             text_input="PLAY", font=get_font(75), base_color="#d7fcd4", hovering_color="yellow")
-        OPTIONS_BUTTON = Button(image=pygame.image.load("assets/Options Rect.png"), pos=(325, 400), 
+        OPTIONS_BUTTON = Button(image=pygame.image.load("assets/Options Rect.png"), pos=(220, 400), 
                             text_input="OPTIONS", font=get_font(75), base_color="#d7fcd4", hovering_color="yellow")
         QUIT_BUTTON = Button(image=pygame.image.load("assets/Quit Rect.png"), pos=(210, 550), 
                             text_input="QUIT", font=get_font(75), base_color="#d7fcd4", hovering_color="yellow")
